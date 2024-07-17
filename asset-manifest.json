@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/iao-frontend/static/css/main.03b8853a.css",
+    "main.js": "/iao-frontend/static/js/main.ec4ba5b0.js",
+    "index.html": "/iao-frontend/index.html",
+    "main.03b8853a.css.map": "/iao-frontend/static/css/main.03b8853a.css.map",
+    "main.ec4ba5b0.js.map": "/iao-frontend/static/js/main.ec4ba5b0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.03b8853a.css",
+    "static/js/main.ec4ba5b0.js"
+  ]
+}
