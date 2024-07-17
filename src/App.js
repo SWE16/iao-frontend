@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import SaveMap from './pages/SaveMap';
@@ -12,7 +12,8 @@ function App() {
         <div>
             <Navbar />
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Navigate to="/home" />} />
+                <Route path="/home" element={<Home />} />
                 <Route path="/save-map" element={<SaveMap />} />
                 <Route path="/update-map" element={<UpdateMap />} />
                 <Route path="/delete-map" element={<DeleteMap />} />
