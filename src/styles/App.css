@@ -1,0 +1,38 @@
+body {
+    background-color: #0A0B1A;
+    
+    color: #E0E0E0;
+    font-family: 'Roboto', sans-serif;
+    
+    margin: 0;
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #E0E0E0;
+}
+
+button {
+    color: #E0E0E0;
+    font-family: 'Roboto', sans-serif;
+   
+}
+
+.text-field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.text-field .MuiInputBase-root {
+    background-color: #131325;
+    color: #E0E0E0;
+}
+
+.text-field .MuiInputLabel-root {
+    color: #A0A0A0;
+}

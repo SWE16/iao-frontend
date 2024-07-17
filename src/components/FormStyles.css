@@ -1,0 +1,24 @@
+.text-field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.text-field .MuiInputBase-root {
+    background-color: #2a2b3d;
+   
+    color: #E0E0E0;
+    border: 1px solid #333;
+   
+    border-radius: 4px;
+   
+    padding: 10px;
+}
+
+.text-field .MuiInputLabel-root {
+    color: #A0A0A0;
+}
+
+.text-field .MuiFilledInput-underline:before,
+.text-field .MuiFilledInput-underline:after {
+    border-bottom: none;
+}
