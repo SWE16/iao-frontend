@@ -9,7 +9,17 @@ const MapForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:3001/save-map', { data: mapData });
+            const res = await axios.post('http://localhost:3001/save-map', {
+                data: mapData,
+            });
+            // const res = await fetch('http://localhost:3001/save-map', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //     },
+            //     body: JSON.stringify({ username: 'pancake' }),
+            // });
+
             if (res.data.ok) {
                 alert('Map saved successfully');
             }
@@ -19,8 +29,19 @@ const MapForm = () => {
     };
 
     return (
-        <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3, backgroundColor: 'background.paper', p: 3, borderRadius: 2 }}>
-            <Typography variant="h5" gutterBottom>Save Map</Typography>
+        <Box
+            component="form"
+            onSubmit={handleSubmit}
+            sx={{
+                mt: 3,
+                backgroundColor: 'background.paper',
+                p: 3,
+                borderRadius: 2,
+            }}
+        >
+            <Typography variant="h5" gutterBottom>
+                Save Map
+            </Typography>
             <TextField
                 label="Map Data"
                 fullWidth
@@ -32,7 +53,9 @@ const MapForm = () => {
                 variant="filled"
                 className="text-field"
             />
-            <Button variant="contained" color="primary" type="submit">Save Map</Button>
+            <Button variant="contained" color="primary" type="submit">
+                Save Map
+            </Button>
         </Box>
     );
 };
