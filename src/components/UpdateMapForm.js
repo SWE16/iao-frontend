@@ -11,7 +11,7 @@ const UpdateMapForm = () => {
         e.preventDefault();
         try {
             const res = await axios.post('http://localhost:3001/update-map', {
-                filter: { uuid },
+                uuid: uuid,
                 updatedMap: mapData,
             });
             if (res.data.ok) {
@@ -23,8 +23,19 @@ const UpdateMapForm = () => {
     };
 
     return (
-        <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3, backgroundColor: 'background.paper', p: 3, borderRadius: 2 }}>
-            <Typography variant="h5" gutterBottom>Update Map</Typography>
+        <Box
+            component="form"
+            onSubmit={handleSubmit}
+            sx={{
+                mt: 3,
+                backgroundColor: 'background.paper',
+                p: 3,
+                borderRadius: 2,
+            }}
+        >
+            <Typography variant="h5" gutterBottom>
+                Update Map
+            </Typography>
             <TextField
                 label="Map UUID"
                 fullWidth
@@ -45,7 +56,9 @@ const UpdateMapForm = () => {
                 variant="filled"
                 className="text-field"
             />
-            <Button variant="contained" color="primary" type="submit">Update Map</Button>
+            <Button variant="contained" color="primary" type="submit">
+                Update Map
+            </Button>
         </Box>
     );
 };

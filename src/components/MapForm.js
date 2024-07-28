@@ -12,16 +12,9 @@ const MapForm = () => {
             const res = await axios.post('http://localhost:3001/save-map', {
                 data: mapData,
             });
-            // const res = await fetch('http://localhost:3001/save-map', {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json',
-            //     },
-            //     body: JSON.stringify({ username: 'pancake' }),
-            // });
 
             if (res.data.ok) {
-                alert('Map saved successfully');
+                alert(`Map saved successfully. \nUUID: ${res.data.uuid}`);
             }
         } catch (error) {
             console.error('Error saving map:', error);
