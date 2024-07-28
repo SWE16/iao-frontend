@@ -14,6 +14,7 @@ const MapForm = () => {
             });
 
             if (res.data.ok) {
+                console.log(res.data);
                 alert(`Map saved successfully. \nUUID: ${res.data.uuid}`);
             }
         } catch (error) {
